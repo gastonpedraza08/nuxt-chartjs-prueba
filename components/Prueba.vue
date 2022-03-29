@@ -3,7 +3,6 @@
       <my-chart 
         :data="chartData"
         :options="chartOptions"
-        :id="'myChart'"
       >
       </my-chart>
   </client-only>

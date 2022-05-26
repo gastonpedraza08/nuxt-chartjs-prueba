@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  mode: 'spa',
   head: {
     title: 'chartjs',
     htmlAttrs: {
@@ -38,5 +39,18 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  mode: 'spa',
+generate: {
+    dir: 'www',
+},
+build: {
+   publicPath: '/android_asset/www/front-end',
+},
+scripts: [
+  {
+    src: '/cordova.js',
+    type: 'text/javascript',
+  },
+],
 }

@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1>Usando chart.js con canvas</h1>
+    <button v-on:click="addCount">Click!</button>
+    <p>{{count}}</p>
     <canvas id="myChart" width="400" height="400"></canvas>
   </div>
 </template>
@@ -11,7 +13,14 @@
   export default {
     data() {
       return {
+        count: 0
       };
+    },
+    methods: {
+        addCount() {
+            console.log("funciona")
+            this.count = this.count + 1;
+        }
     },
     mounted() {
       const ctx = document.getElementById('myChart').getContext('2d');
